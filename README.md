@@ -12,6 +12,6 @@ The day in four frames: the world news of Thursday 26 November 2026 as a newspap
 python3 main.py
 ```
 
-This writes the image to `/output/entry.png` (and to `entry.png` next to `main.py` when the directory is writable). It needs only Pillow, runs with no network, and is fully deterministic: two runs produce byte-identical files.
+This copies the pre-rendered image `entry.png` to `/output/entry.png` (or to `$MAKEFUN_OUTPUT_DIR/entry.png` when set). The comic strip was drawn at build time by `draw_comic.py` (Pillow + DejaVu fonts); `main.py` itself is a pure-stdlib copier, so it needs no third-party packages, runs with no network, and is fully deterministic.
 
 Built with [make.fun](https://make.fun/?ref=d5a50dzy) — enter the bounty [here](https://make.fun/bounty/news-image-20261126).
